@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Best Service Trucking LLC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #1a5490 0%, #2c3e50 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        .nav-links a.active {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #1a5490 0%, #2c3e50 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 20px;
+        }
+
+        .section h2 {
+            font-size: 2.2rem;
+            color: #1a5490;
+            margin-bottom: 2rem;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Team Grid */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            background: #f8f9fa;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .team-member-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #1a5490 0%, #2c3e50 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+
+        .team-member-info {
+            padding: 2rem 1.5rem;
+        }
+
+        .team-member h3 {
+            color: #1a5490;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member p {
+            color: #7f8c8d;
+            margin-bottom: 0;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            padding-left: 3rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: #1a5490;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #1a5490;
+        }
+
+        .timeline-item h3 {
+            color: #1a5490;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 20px;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: #3498db;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #34495e;
+            color: #95a5a6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index_html.html" class="logo">
+                <i class="fas fa-truck"></i> Best Service Trucking
+            </a>
+            <ul class="nav-links">
+                <li><a href="index_html.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="fleet.html">Fleet</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="driver-application.html">Driver App</a></li>
+                <li><a href="admin-dashboard.html">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>About Us</h1>
+        <p>Learn more about Best Service Trucking LLC</p>
+    </div>
+
+    <!-- About Content -->
+    <section class="section">
+        <div class="container">
+            <h2>Our Story</h2>
+            <p>
+                Best Service Trucking LLC was founded in 2010 with a simple mission: to provide reliable, 
+                professional trucking services to businesses across the country. What started as a small operation 
+                with just a few trucks has grown into a trusted partner for hundreds of companies.
+            </p>
+            <p>
+                Our commitment to excellence, safety, and customer satisfaction has been the foundation of our 
+                success. We continue to invest in our fleet, technology, and most importantly, our people.
+            </p>
+        </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <h2>Our Mission & Values</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem;">
+                <div>
+                    <h3 style="color: #1a5490; margin-bottom: 1rem;">
+                        <i class="fas fa-bullseye"></i> Mission
+                    </h3>
+                    <p>
+                        To deliver exceptional trucking services with unwavering commitment to safety, 
+                        reliability, and customer satisfaction.
+                    </p>
+                </div>
+                <div>
+                    <h3 style="color: #1a5490; margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i> Values
+                    </h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li>✓ Safety First</li>
+                        <li>✓ Integrity & Honesty</li>
+                        <li>✓ Customer Focus</li>
+                        <li>✓ Excellence</li>
+                        <li>✓ Teamwork</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section">
+        <div class="container">
+            <h2>Company Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>2010</h3>
+                    <p>Founded Best Service Trucking LLC with 5 trucks and a dedicated team</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2013</h3>
+                    <p>Expanded fleet to 25 trucks and opened second service location</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2016</h3>
+                    <p>Implemented advanced GPS tracking and fleet management systems</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2019</h3>
+                    <p>Reached 100+ truck fleet with national coverage</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2023</h3>
+                    <p>Launched digital customer portal and mobile application</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>2026</h3>
+                    <p>Now serving thousands of customers nationwide with excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <h2>Leadership Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-member-image">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="team-member-info">
+                        <h3>John Smith</h3>
+                        <p>CEO & Founder</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-member-image">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="team-member-info">
+                        <h3>Sarah Johnson</h3>
+                        <p>Operations Director</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-member-image">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="team-member-info">
+                        <h3>Mike Davis</h3>
+                        <p>Fleet Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Best Service Trucking LLC is a leading provider of professional trucking and logistics solutions.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index_html.html">Home</a></p>
+                <p><a href="about.html">About</a></p>
+                <p><a href="services.html">Services</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@bestservicetrucking.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Trucking Lane, City, State 12345</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <p><a href="#"><i class="fab fa-facebook"></i> Facebook</a></p>
+                <p><a href="#"><i class="fab fa-twitter"></i> Twitter</a></p>
+                <p><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Best Service Trucking LLC. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

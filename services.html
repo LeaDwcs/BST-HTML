@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Best Service Trucking LLC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #1a5490 0%, #2c3e50 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #3498db;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #1a5490 0%, #2c3e50 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 20px;
+        }
+
+        .section h2 {
+            font-size: 2.2rem;
+            color: #1a5490;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border: 2px solid #ecf0f1;
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: #1a5490;
+            box-shadow: 0 5px 20px rgba(26, 84, 144, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: #1a5490;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .service-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .service-list li {
+            padding: 0.5rem 0;
+            color: #555;
+        }
+
+        .service-list li::before {
+            content: '✓ ';
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 20px;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #34495e;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index_html.html" class="logo">
+                <i class="fas fa-truck"></i> Best Service Trucking
+            </a>
+            <ul class="nav-links">
+                <li><a href="index_html.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="fleet.html">Fleet</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="driver-application.html">Driver App</a></li>
+                <li><a href="admin-dashboard.html">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Our Services</h1>
+        <p>Comprehensive Trucking & Logistics Solutions</p>
+    </div>
+
+    <!-- Services -->
+    <section class="section">
+        <div class="container">
+            <h2>What We Offer</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-box"></i>
+                    <h3>Freight Transport</h3>
+                    <p>Reliable freight transportation services across the country with professional handling.</p>
+                    <ul class="service-list">
+                        <li>LTL (Less Than Truckload)</li>
+                        <li>Full Truckload (FTL)</li>
+                        <li>Cross-country shipping</li>
+                        <li>Express freight service</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-cube"></i>
+                    <h3>Bulk Cargo</h3>
+                    <p>Specialized handling for bulk and oversized cargo with proper equipment.</p>
+                    <ul class="service-list">
+                        <li>Heavy equipment transport</li>
+                        <li>Oversized loads</li>
+                        <li>Specialized vehicles</li>
+                        <li>Secure fastening</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Express Delivery</h3>
+                    <p>Fast-track delivery options for urgent and time-sensitive shipments.</p>
+                    <ul class="service-list">
+                        <li>Same-day delivery</li>
+                        <li>Next-day service</li>
+                        <li>Priority handling</li>
+                        <li>Real-time tracking</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-snowflake"></i>
+                    <h3>Temperature Control</h3>
+                    <p>Climate-controlled transportation for temperature-sensitive goods.</p>
+                    <ul class="service-list">
+                        <li>Refrigerated transport</li>
+                        <li>Heated cargo area</li>
+                        <li>Humidity control</li>
+                        <li>Food-grade vehicles</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>Secure Transport</h3>
+                    <p>Secure transportation for valuable and sensitive cargo.</p>
+                    <ul class="service-list">
+                        <li>Armored vehicles</li>
+                        <li>Security escort</li>
+                        <li>24/7 monitoring</li>
+                        <li>Insurance coverage</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-warehouse"></i>
+                    <h3>Warehousing</h3>
+                    <p>Storage and warehousing solutions for short and long-term needs.</p>
+                    <ul class="service-list">
+                        <li>Climate control</li>
+                        <li>Security systems</li>
+                        <li>Inventory management</li>
+                        <li>Distribution center</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <h2>Why Choose Our Services</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div style="text-align: center; padding: 2rem; background: white; border-radius: 8px;">
+                    <i class="fas fa-check-circle" style="font-size: 2.5rem; color: #27ae60; margin-bottom: 1rem;"></i>
+                    <h3 style="color: #1a5490; margin-bottom: 0.5rem;">Professional Drivers</h3>
+                    <p>Highly trained and certified drivers with years of experience.</p>
+                </div>
+                <div style="text-align: center; padding: 2rem; background: white; border-radius: 8px;">
+                    <i class="fas fa-shield-alt" style="font-size: 2.5rem; color: #27ae60; margin-bottom: 1rem;"></i>
+                    <h3 style="color: #1a5490; margin-bottom: 0.5rem;">Safety Focused</h3>
+                    <p>Top-notch safety records and comprehensive insurance coverage.</p>
+                </div>
+                <div style="text-align: center; padding: 2rem; background: white; border-radius: 8px;">
+                    <i class="fas fa-mobile-alt" style="font-size: 2.5rem; color: #27ae60; margin-bottom: 1rem;"></i>
+                    <h3 style="color: #1a5490; margin-bottom: 0.5rem;">Real-time Tracking</h3>
+                    <p>Track your shipment live with our advanced GPS system.</p>
+                </div>
+                <div style="text-align: center; padding: 2rem; background: white; border-radius: 8px;">
+                    <i class="fas fa-dollar-sign" style="font-size: 2.5rem; color: #27ae60; margin-bottom: 1rem;"></i>
+                    <h3 style="color: #1a5490; margin-bottom: 0.5rem;">Competitive Pricing</h3>
+                    <p>Best rates in the industry with transparent pricing.</p>
+                </div>
+                <div style="text-align: center; padding: 2rem; background: white; border-radius: 8px;">
+                    <i class="fas fa-headset" style="font-size: 2.5rem; color: #27ae60; margin-bottom: 1rem;"></i>
+                    <h3 style="color: #1a5490; margin-bottom: 0.5rem;">24/7 Support</h3>
+                    <p>Round-the-clock customer service for your peace of mind.</p>
+                </div>
+                <div style="text-align: center; padding: 2rem; background: white; border-radius: 8px;">
+                    <i class="fas fa-star" style="font-size: 2.5rem; color: #27ae60; margin-bottom: 1rem;"></i>
+                    <h3 style="color: #1a5490; margin-bottom: 0.5rem;">Excellence</h3>
+                    <p>Committed to delivering exceptional service every time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Best Service Trucking LLC is a leading provider of professional trucking and logistics solutions.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index_html.html">Home</a></p>
+                <p><a href="about.html">About</a></p>
+                <p><a href="services.html">Services</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@bestservicetrucking.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Trucking Lane, City, State 12345</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <p><a href="#"><i class="fab fa-facebook"></i> Facebook</a></p>
+                <p><a href="#"><i class="fab fa-twitter"></i> Twitter</a></p>
+                <p><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Best Service Trucking LLC. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

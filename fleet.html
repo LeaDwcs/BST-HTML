@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet - Best Service Trucking LLC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #1a5490 0%, #2c3e50 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #3498db;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #1a5490 0%, #2c3e50 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 20px;
+        }
+
+        .section h2 {
+            font-size: 2.2rem;
+            color: #1a5490;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .fleet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .fleet-card {
+            background: white;
+            border: 2px solid #ecf0f1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .fleet-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(26, 84, 144, 0.2);
+            border-color: #1a5490;
+        }
+
+        .fleet-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #1a5490 0%, #2c3e50 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+
+        .fleet-card-content {
+            padding: 1.5rem;
+        }
+
+        .fleet-card h3 {
+            color: #1a5490;
+            margin-bottom: 0.5rem;
+        }
+
+        .specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .specs div {
+            padding: 0.5rem 0;
+        }
+
+        .specs strong {
+            color: #2c3e50;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #1a5490 0%, #2c3e50 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 20px;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #34495e;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index_html.html" class="logo">
+                <i class="fas fa-truck"></i> Best Service Trucking
+            </a>
+            <ul class="nav-links">
+                <li><a href="index_html.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="fleet.html" class="active">Fleet</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="driver-application.html">Driver App</a></li>
+                <li><a href="admin-dashboard.html">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>Our Fleet</h1>
+        <p>Modern, Well-Maintained Vehicles</p>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">150+</div>
+                    <div>Active Trucks</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">99.8%</div>
+                    <div>Reliability Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div>Operations</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div>Specialized Vehicles</div>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 3rem;">Vehicle Types</h2>
+
+            <div class="fleet-grid">
+                <div class="fleet-card">
+                    <div class="fleet-image">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="fleet-card-content">
+                        <h3>Dry Van Trucks</h3>
+                        <p>Standard 53ft enclosed trailers for general freight.</p>
+                        <div class="specs">
+                            <div><strong>Capacity:</strong> 45,000 lbs</div>
+                            <div><strong>Count:</strong> 85 units</div>
+                            <div><strong>Year:</strong> 2022-2024</div>
+                            <div><strong>Brand:</strong> Volvo, Freightliner</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fleet-card">
+                    <div class="fleet-image">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <div class="fleet-card-content">
+                        <h3>Refrigerated Trucks</h3>
+                        <p>Climate-controlled for temperature-sensitive cargo.</p>
+                        <div class="specs">
+                            <div><strong>Capacity:</strong> 43,000 lbs</div>
+                            <div><strong>Count:</strong> 35 units</div>
+                            <div><strong>Temp Range:</strong> -20°F to 55°F</div>
+                            <div><strong>Brand:</strong> Wabash, Great Dane</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fleet-card">
+                    <div class="fleet-image">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <div class="fleet-card-content">
+                        <h3>Flatbed Trucks</h3>
+                        <p>Open deck for oversized and heavy equipment.</p>
+                        <div class="specs">
+                            <div><strong>Capacity:</strong> 50,000 lbs</div>
+                            <div><strong>Count:</strong> 20 units</div>
+                            <div><strong>Length:</strong> 53-60 ft</div>
+                            <div><strong>Brand:</strong> Fontaine, Hyster</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fleet-card">
+                    <div class="fleet-image">
+                        <i class="fas fa-tank"></i>
+                    </div>
+                    <div class="fleet-card-content">
+                        <h3>Tanker Trucks</h3>
+                        <p>Specialized for liquids and hazardous materials.</p>
+                        <div class="specs">
+                            <div><strong>Capacity:</strong> 5,000-7,000 gal</div>
+                            <div><strong>Count:</strong> 10 units</div>
+                            <div><strong>Certification:</strong> HAZMAT</div>
+                            <div><strong>Brand:</strong> Polar, Brenntag</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fleet-card">
+                    <div class="fleet-image">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="fleet-card-content">
+                        <h3>Armored Trucks</h3>
+                        <p>Secure transport for valuable cargo.</p>
+                        <div class="specs">
+                            <div><strong>Security:</strong> High-level</div>
+                            <div><strong>Count:</strong> 8 units</div>
+                            <div><strong>GPS Tracking:</strong> Real-time</div>
+                            <div><strong>Escort:</strong> Available</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fleet-card">
+                    <div class="fleet-image">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="fleet-card-content">
+                        <h3>Straight Trucks</h3>
+                        <p>Smaller vehicles for local and regional delivery.</p>
+                        <div class="specs">
+                            <div><strong>Capacity:</strong> 25,000 lbs</div>
+                            <div><strong>Count:</strong> 22 units</div>
+                            <div><strong>Year:</strong> 2021-2023</div>
+                            <div><strong>Brand:</strong> Isuzu, Hino</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Best Service Trucking LLC is a leading provider of professional trucking and logistics solutions.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index_html.html">Home</a></p>
+                <p><a href="about.html">About</a></p>
+                <p><a href="services.html">Services</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@bestservicetrucking.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Trucking Lane, City, State 12345</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <p><a href="#"><i class="fab fa-facebook"></i> Facebook</a></p>
+                <p><a href="#"><i class="fab fa-twitter"></i> Twitter</a></p>
+                <p><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Best Service Trucking LLC. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

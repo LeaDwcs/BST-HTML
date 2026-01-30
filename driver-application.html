@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Application - Best Service Trucking LLC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #1a5490 0%, #2c3e50 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #3498db;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #1a5490 0%, #2c3e50 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 20px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #1a5490;
+            box-shadow: 0 0 5px rgba(26, 84, 144, 0.3);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            font-weight: normal;
+        }
+
+        .checkbox-group input {
+            width: auto;
+            margin-right: 0.5rem;
+        }
+
+        .submit-btn {
+            background: #e74c3c;
+            color: white;
+            padding: 12px 40px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            background: #c0392b;
+        }
+
+        .form-card {
+            background: white;
+            border: 2px solid #ecf0f1;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .form-section-title {
+            color: #1a5490;
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 20px;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #34495e;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .checkbox-group {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index_html.html" class="logo">
+                <i class="fas fa-truck"></i> Best Service Trucking
+            </a>
+            <ul class="nav-links">
+                <li><a href="index_html.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="fleet.html">Fleet</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="driver-application.html" class="active">Driver App</a></li>
+                <li><a href="admin-dashboard.html">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>Driver Application</h1>
+        <p>Join Our Professional Team</p>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div class="form-card">
+                <form onsubmit="handleSubmit(event)">
+                    <!-- Personal Information -->
+                    <div class="form-section-title">Personal Information</div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dob">Date of Birth *</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ssn">Social Security Number *</label>
+                            <input type="password" id="ssn" name="ssn" placeholder="XXX-XX-XXXX" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Street Address *</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State *</label>
+                            <input type="text" id="state" name="state" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">ZIP Code *</label>
+                            <input type="text" id="zip" name="zip" required>
+                        </div>
+                    </div>
+
+                    <!-- Driving Experience -->
+                    <div class="form-section-title">Driving Experience</div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="license">Commercial Driver's License (CDL) Class *</label>
+                            <select id="license" name="license" required>
+                                <option value="">Select Class</option>
+                                <option value="A">Class A</option>
+                                <option value="B">Class B</option>
+                                <option value="C">Class C</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="experience">Years of Driving Experience *</label>
+                            <input type="number" id="experience" name="experience" min="0" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="certifications">Endorsements *</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="cert" value="H"> Hazmat</label>
+                            <label><input type="checkbox" name="cert" value="T"> Tanker</label>
+                            <label><input type="checkbox" name="cert" value="P"> Passenger</label>
+                            <label><input type="checkbox" name="cert" value="N"> Doubles/Triples</label>
+                        </div>
+                    </div>
+
+                    <!-- Employment History -->
+                    <div class="form-section-title">Employment History</div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="prevCompany">Previous Company</label>
+                            <input type="text" id="prevCompany" name="prevCompany">
+                        </div>
+                        <div class="form-group">
+                            <label for="yearsEmployed">Years Employed</label>
+                            <input type="text" id="yearsEmployed" name="yearsEmployed">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reasonLeft">Reason for Leaving</label>
+                        <textarea id="reasonLeft" name="reasonLeft" placeholder="Briefly explain why you left your previous position"></textarea>
+                    </div>
+
+                    <!-- Background -->
+                    <div class="form-section-title">Background Check</div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="background" required>
+                            I authorize a background check and drug screening *
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="violations">Any Traffic Violations or Accidents? *</label>
+                        <select id="violations" name="violations" required>
+                            <option value="">Select an option</option>
+                            <option value="no">No</option>
+                            <option value="yes">Yes, please explain below</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="explanation">If yes, please explain:</label>
+                        <textarea id="explanation" name="explanation" placeholder="Please provide details about any violations or accidents"></textarea>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div class="form-section-title">Additional Information</div>
+
+                    <div class="form-group">
+                        <label for="availability">When can you start? *</label>
+                        <input type="date" id="availability" name="availability" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Additional Comments</label>
+                        <textarea id="notes" name="notes" placeholder="Any additional information you'd like us to know"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Best Service Trucking LLC is a leading provider of professional trucking and logistics solutions.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="index_html.html">Home</a></p>
+                <p><a href="about.html">About</a></p>
+                <p><a href="services.html">Services</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@bestservicetrucking.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Trucking Lane, City, State 12345</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <p><a href="#"><i class="fab fa-facebook"></i> Facebook</a></p>
+                <p><a href="#"><i class="fab fa-twitter"></i> Twitter</a></p>
+                <p><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Best Service Trucking LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for submitting your application! We will review it and contact you soon.');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
