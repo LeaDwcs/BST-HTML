@@ -389,31 +389,15 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <a href="index_html.html" class="logo">
-                <i class="fas fa-truck"></i> Best Service Trucking
-            </a>
-            <ul class="nav-links">
-                <li><a href="index_html.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="fleet.html">Fleet</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="driver-application.html">Driver App</a></li>
-                <li><a href="admin-dashboard.html">Admin</a></li>
-            </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
+    <div id="header-container"></div>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>Welcome to Best Service Trucking LLC</h1>
-        <p>Professional Trucking Services for Your Business</p>
-        <a href="contact.html" class="cta-button">Get in Touch</a>
+    <section class="hero" style="background: linear-gradient(135deg, rgba(26, 84, 144, 0.7) 0%, rgba(44, 62, 80, 0.7) 100%), url('https://images.unsplash.com/photo-1494976388531-d1058bb78471?w=1200&h=500&fit=crop') center/cover; color: white; text-align: center; padding: 150px 20px; min-height: 500px; display: flex; align-items: center; justify-content: center;">
+        <div class="container">
+            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Welcome to Best Service Trucking LLC</h1>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem;">Professional Trucking Services for Your Business</p>
+            <a href="contact.html" class="cta-button" style="display: inline-block; background: #e74c3c; color: white; padding: 15px 40px; text-decoration: none; border-radius: 5px; font-size: 1.1rem;">Get in Touch</a>
+        </div>
     </section>
 
     <!-- Features Section -->
@@ -479,42 +463,14 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>About Us</h4>
-                <p>Best Service Trucking LLC is a leading provider of professional trucking and logistics solutions.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <p><a href="index_html.html">Home</a></p>
-                <p><a href="about.html">About</a></p>
-                <p><a href="services.html">Services</a></p>
-                <p><a href="contact.html">Contact</a></p>
-            </div>
-            <div class="footer-section">
-                <h4>Contact Info</h4>
-                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                <p><i class="fas fa-envelope"></i> info@bestservicetrucking.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> 123 Trucking Lane, City, State 12345</p>
-            </div>
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <p><a href="#"><i class="fab fa-facebook"></i> Facebook</a></p>
-                <p><a href="#"><i class="fab fa-twitter"></i> Twitter</a></p>
-                <p><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Best Service Trucking LLC. All rights reserved.</p>
-        </div>
-    </footer>
+    <div id="footer-container"></div>
 
     <!-- Back to Top -->
     <div class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </div>
 
+    <script src="script.js"></script>
     <script>
         // Back to Top
         const backToTop = document.getElementById('backToTop');

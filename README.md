@@ -10,7 +10,6 @@ BST-HTML/
 ├── fleet.html                   # Fleet information page
 ├── contact.html                 # Contact & contact form
 ├── driver-application.html      # Driver application form
-├── admin-dashboard.html         # Admin control panel
 ├── PROJECT_REPORT.html          # Project documentation report
 ├── styles.css                   # Main stylesheet
 ├── script.js                    # Main JavaScript file
@@ -25,7 +24,6 @@ Contains all styling for:
 - Buttons and forms
 - Cards and grids
 - Tables and badges
-- Admin dashboard styles
 - Footer
 - Back-to-top button
 - Animations and transitions
@@ -38,7 +36,6 @@ Contains all styling for:
 - `.section` - Page sections
 - `.features-grid` - Feature cards grid
 - `.form-group` - Form elements
-- `.admin-container` - Admin layout
 - `.footer-content` - Footer layout
 
 ## 🚀 JavaScript File (script.js)
@@ -50,7 +47,6 @@ Contains functionality for:
 - Active navigation link highlighting
 - Contact form validation
 - Driver application submission
-- Admin dashboard functions
 - Email validation
 - Phone validation
 - Smooth scrolling
@@ -60,7 +56,6 @@ Contains functionality for:
 - `handleFormSubmit()` - Generic form handler
 - `handleContactSubmit()` - Contact form handler
 - `handleApplicationSubmit()` - Driver app handler
-- `handleLogout()` - Admin logout
 - `validateEmail()` - Email validation
 - `validatePhone()` - Phone validation
 - `setActiveNavLink()` - Active link highlighting
@@ -92,11 +87,7 @@ Contains functionality for:
 - **Purpose**: Driver recruitment
 - **Sections**: Personal info, Driving experience, Employment history, Background check
 
-### 7. admin-dashboard.html
-- **Purpose**: Administrative interface
-- **Sections**: Sidebar navigation, Statistics, User management table, Shipments table
-
-### 8. PROJECT_REPORT.html
+### 7. PROJECT_REPORT.html
 - **Purpose**: Project documentation
 - **Sections**: Complete project report with details
 

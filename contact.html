@@ -95,10 +95,15 @@
             margin-bottom: 2rem;
         }
 
+        .contact-item p {
+            margin: 0;
+        }
+
         .contact-item i {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: #1a5490;
-            margin-right: 1rem;
+            margin-right: 0.5rem;
+            vertical-align: text-top;
         }
 
         .contact-item h3 {
@@ -201,24 +206,9 @@
     </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index_html.html" class="logo">
-                <i class="fas fa-truck"></i> Best Service Trucking
-            </a>
-            <ul class="nav-links">
-                <li><a href="index_html.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="fleet.html">Fleet</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-                <li><a href="driver-application.html">Driver App</a></li>
-                <li><a href="admin-dashboard.html">Admin</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div id="header-container"></div>
 
-    <div class="page-header">
+    <div class="page-header" style="background: linear-gradient(135deg, rgba(26, 84, 144, 0.7) 0%, rgba(44, 62, 80, 0.7) 100%), url('https://images.unsplash.com/photo-1587280353211-c76b6a8fc822?w=1200&h=400&fit=crop') center/cover;">
         <h1>Contact Us</h1>
         <p>Get in Touch With Our Team</p>
     </div>
@@ -264,7 +254,6 @@
                         <div class="contact-item">
                             <h3>Office Location</h3>
                             <p>
-                                <i class="fas fa-map-marker-alt"></i>
                                 123 Trucking Lane<br>
                                 City, State 12345<br>
                                 United States
@@ -274,7 +263,6 @@
                         <div class="contact-item">
                             <h3>Phone</h3>
                             <p>
-                                <i class="fas fa-phone"></i>
                                 Main: +1 (555) 123-4567<br>
                                 Dispatch: +1 (555) 987-6543<br>
                                 Support: +1 (555) 456-7890
@@ -284,7 +272,6 @@
                         <div class="contact-item">
                             <h3>Email</h3>
                             <p>
-                                <i class="fas fa-envelope"></i>
                                 info@bestservicetrucking.com<br>
                                 dispatch@bestservicetrucking.com<br>
                                 support@bestservicetrucking.com
@@ -294,7 +281,6 @@
                         <div class="contact-item">
                             <h3>Business Hours</h3>
                             <p>
-                                <i class="fas fa-clock"></i>
                                 Monday - Friday: 8:00 AM - 6:00 PM<br>
                                 Saturday: 9:00 AM - 2:00 PM<br>
                                 Sunday: Closed<br>
@@ -307,10 +293,10 @@
                             <p>
                                 <a href="#" style="color: #1a5490; text-decoration: none; margin-right: 1rem;">
                                     <i class="fab fa-facebook"></i> Facebook
-                                </a><br>
+                                </a>
                                 <a href="#" style="color: #1a5490; text-decoration: none; margin-right: 1rem;">
                                     <i class="fab fa-twitter"></i> Twitter
-                                </a><br>
+                                </a>
                                 <a href="#" style="color: #1a5490; text-decoration: none;">
                                     <i class="fab fa-linkedin"></i> LinkedIn
                                 </a>
@@ -322,37 +308,9 @@
         </div>
     </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>About Us</h4>
-                <p>Best Service Trucking LLC is a leading provider of professional trucking and logistics solutions.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <p><a href="index_html.html">Home</a></p>
-                <p><a href="about.html">About</a></p>
-                <p><a href="services.html">Services</a></p>
-                <p><a href="contact.html">Contact</a></p>
-            </div>
-            <div class="footer-section">
-                <h4>Contact Info</h4>
-                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                <p><i class="fas fa-envelope"></i> info@bestservicetrucking.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> 123 Trucking Lane, City, State 12345</p>
-            </div>
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <p><a href="#"><i class="fab fa-facebook"></i> Facebook</a></p>
-                <p><a href="#"><i class="fab fa-twitter"></i> Twitter</a></p>
-                <p><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Best Service Trucking LLC. All rights reserved.</p>
-        </div>
-    </footer>
+    <div id="footer-container"></div>
 
+    <script src="script.js"></script>
     <script>
         function handleSubmit(event) {
             event.preventDefault();

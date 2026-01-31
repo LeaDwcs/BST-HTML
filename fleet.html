@@ -206,24 +206,9 @@
     </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index_html.html" class="logo">
-                <i class="fas fa-truck"></i> Best Service Trucking
-            </a>
-            <ul class="nav-links">
-                <li><a href="index_html.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="fleet.html" class="active">Fleet</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="driver-application.html">Driver App</a></li>
-                <li><a href="admin-dashboard.html">Admin</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div id="header-container"></div>
 
-    <div class="page-header">
+    <div class="page-header" style="background: linear-gradient(135deg, rgba(26, 84, 144, 0.7) 0%, rgba(44, 62, 80, 0.7) 100%), url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&h=400&fit=crop') center/cover;">
         <h1>Our Fleet</h1>
         <p>Modern, Well-Maintained Vehicles</p>
     </div>
@@ -254,7 +239,7 @@
             <div class="fleet-grid">
                 <div class="fleet-card">
                     <div class="fleet-image">
-                        <i class="fas fa-truck"></i>
+                        <img src="https://images.unsplash.com/photo-1533807671554-2a0a9e572a9b?w=400&h=300&fit=crop" alt="Dry Van Truck" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px 8px 0 0;">
                     </div>
                     <div class="fleet-card-content">
                         <h3>Dry Van Trucks</h3>
@@ -270,7 +255,7 @@
 
                 <div class="fleet-card">
                     <div class="fleet-image">
-                        <i class="fas fa-snowflake"></i>
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695c952952w=400&h=300&fit=crop" alt="Refrigerated Truck" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px 8px 0 0;">
                     </div>
                     <div class="fleet-card-content">
                         <h3>Refrigerated Trucks</h3>
@@ -286,7 +271,7 @@
 
                 <div class="fleet-card">
                     <div class="fleet-image">
-                        <i class="fas fa-cube"></i>
+                        <img src="https://images.unsplash.com/photo-1514521474632-543e50e3bf46?w=400&h=300&fit=crop" alt="Flatbed Truck" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px 8px 0 0;">
                     </div>
                     <div class="fleet-card-content">
                         <h3>Flatbed Trucks</h3>
@@ -302,7 +287,7 @@
 
                 <div class="fleet-card">
                     <div class="fleet-image">
-                        <i class="fas fa-tank"></i>
+                        <img src="https://images.unsplash.com/photo-1557804506-669714d2e9d8?w=400&h=300&fit=crop" alt="Tanker Truck" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px 8px 0 0;">
                     </div>
                     <div class="fleet-card-content">
                         <h3>Tanker Trucks</h3>
@@ -318,7 +303,7 @@
 
                 <div class="fleet-card">
                     <div class="fleet-image">
-                        <i class="fas fa-lock"></i>
+                        <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=400&h=300&fit=crop" alt="Armored Truck" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px 8px 0 0;">
                     </div>
                     <div class="fleet-card-content">
                         <h3>Armored Trucks</h3>
@@ -351,35 +336,8 @@
         </div>
     </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>About Us</h4>
-                <p>Best Service Trucking LLC is a leading provider of professional trucking and logistics solutions.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <p><a href="index_html.html">Home</a></p>
-                <p><a href="about.html">About</a></p>
-                <p><a href="services.html">Services</a></p>
-                <p><a href="contact.html">Contact</a></p>
-            </div>
-            <div class="footer-section">
-                <h4>Contact Info</h4>
-                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                <p><i class="fas fa-envelope"></i> info@bestservicetrucking.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> 123 Trucking Lane, City, State 12345</p>
-            </div>
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <p><a href="#"><i class="fab fa-facebook"></i> Facebook</a></p>
-                <p><a href="#"><i class="fab fa-twitter"></i> Twitter</a></p>
-                <p><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Best Service Trucking LLC. All rights reserved.</p>
-        </div>
-    </footer>
+    <div id="footer-container"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>

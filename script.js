@@ -2,6 +2,37 @@
    BEST SERVICE TRUCKING LLC - MAIN JAVASCRIPT
    ============================================ */
 
+// Load Header and Footer
+function loadHeaderFooter() {
+    // Load Header
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            const headerContainer = document.getElementById('header-container');
+            if (headerContainer) {
+                headerContainer.innerHTML = data;
+                setActiveNavLink();
+            }
+        })
+        .catch(error => console.error('Error loading header:', error));
+
+    // Load Footer
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            const footerContainer = document.getElementById('footer-container');
+            if (footerContainer) {
+                footerContainer.innerHTML = data;
+            }
+        })
+        .catch(error => console.error('Error loading footer:', error));
+}
+
+// Initialize header and footer on page load
+document.addEventListener('DOMContentLoaded', () => {
+    loadHeaderFooter();
+});
+
 // Back to Top Functionality
 const backToTop = document.getElementById('backToTop');
 
