@@ -117,16 +117,85 @@ function handleContactSubmit(event) {
 function handleApplicationSubmit(event) {
     event.preventDefault();
     
-    const firstName = document.getElementById('firstName').value;
-    const lastName = document.getElementById('lastName').value;
-    const email = document.getElementById('email').value;
+    // Get all form fields
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const dob = document.getElementById('dob').value;
+    const ssn = document.getElementById('ssn').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const city = document.getElementById('city').value.trim();
+    const state = document.getElementById('state').value.trim();
+    const zip = document.getElementById('zip').value.trim();
+    const license = document.getElementById('license').value;
+    const experience = document.getElementById('experience').value;
+    const backgroundCheck = document.querySelector('input[name="background"]:checked');
     
-    if (firstName && lastName && email) {
-        alert('Thank you for submitting your application! We will review it and contact you soon.');
-        event.target.reset();
-    } else {
-        alert('Please fill in all required fields.');
+    // Validation checks
+    const errors = [];
+    
+    // Personal Information validation
+    if (!firstName) errors.push('First name is required');
+    if (!lastName) errors.push('Last name is required');
+    if (!email || !email.includes('@')) errors.push('Valid email address is required');
+    if (!phone || phone.length < 10) errors.push('Valid phone number is required');
+    if (!dob) errors.push('Date of birth is required');
+    if (!ssn || ssn.length < 5) errors.push('Social Security Number is required');
+    if (!address) errors.push('Street address is required');
+    if (!city) errors.push('City is required');
+    if (!state) errors.push('State is required');
+    if (!zip || zip.length < 5) errors.push('ZIP code is required');
+    
+    // Driving Experience validation
+    if (!license) errors.push('CDL class is required');
+    if (!experience || experience < 0) errors.push('Years of driving experience is required');
+    if (parseInt(experience) < 1) errors.push('Must have at least 1 year of driving experience');
+    
+    // Background check validation
+    if (!backgroundCheck) errors.push('You must authorize background check and drug screening');
+    
+    // Show errors if any
+    if (errors.length > 0) {
+        alert('Please fix the following errors:\n\n' + errors.join('\n'));
+        return;
     }
+    
+    // Get selected endorsements
+    const endorsements = Array.from(document.querySelectorAll('input[name="cert"]:checked'))
+        .map(el => el.value)
+        .join(', ');
+    
+    // Prepare application data
+    const applicationData = {
+        firstName,
+        lastName,
+        email,
+        phone,
+        dob,
+        address,
+        city,
+        state,
+        zip,
+        license,
+        experience,
+        endorsements: endorsements || 'None',
+        prevCompany: document.getElementById('prevCompany').value.trim(),
+        yearsEmployed: document.getElementById('yearsEmployed').value.trim(),
+        reasonLeft: document.getElementById('reasonLeft').value.trim(),
+        submittedAt: new Date().toLocaleString()
+    };
+    
+    // Store in localStorage (for demo purposes)
+    const applications = JSON.parse(localStorage.getItem('driverApplications')) || [];
+    applications.push(applicationData);
+    localStorage.setItem('driverApplications', JSON.stringify(applications));
+    
+    // Show success message
+    alert(`Thank you for submitting your application, ${firstName}!\n\nWe have received your information and will review it shortly. You will hear from us within 48 hours.\n\nApplication Reference: ${Date.now()}`);
+    
+    // Reset form
+    event.target.reset();
 }
 
 // Admin Dashboard Functions
@@ -172,6 +241,24 @@ function validateEmail(email) {
 function validatePhone(phone) {
     const re = /^\d{3}-?\d{3}-?\d{4}$/;
     return re.test(phone);
+}
+
+// Get all submitted applications
+function getAllApplications() {
+    return JSON.parse(localStorage.getItem('driverApplications')) || [];
+}
+
+// Get application count
+function getApplicationCount() {
+    return getAllApplications().length;
+}
+
+// Clear all applications (admin function)
+function clearAllApplications() {
+    if (confirm('Are you sure you want to clear all applications? This cannot be undone.')) {
+        localStorage.removeItem('driverApplications');
+        alert('All applications have been cleared.');
+    }
 }
 
 // Add event listeners to email inputs for validation
