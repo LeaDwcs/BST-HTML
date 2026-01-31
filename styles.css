@@ -820,6 +820,214 @@ footer {
     }
 }
 
+/* ============================================
+   PAGE HEADER WITH BACKGROUND IMAGES
+   ============================================ */
+
+.page-header {
+    background: linear-gradient(135deg, rgba(26, 84, 144, 0.7) 0%, rgba(44, 62, 80, 0.7) 100%);
+    background-size: cover;
+    background-position: center;
+}
+
+.page-header-contact {
+    background-image: url('https://images.unsplash.com/photo-1587280353211-c76b6a8fc822?w=1200&h=400&fit=crop');
+}
+
+.page-header-about {
+    background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=400&fit=crop');
+}
+
+.page-header-fleet {
+    background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&h=400&fit=crop');
+}
+
+.page-header-services {
+    background-image: url('https://images.unsplash.com/photo-1578762639867-2c5cda7f43e1?w=1200&h=400&fit=crop');
+}
+
+.page-header-driver {
+    background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=400&fit=crop');
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+    background: linear-gradient(135deg, rgba(26, 84, 144, 0.7) 0%, rgba(44, 62, 80, 0.7) 100%), 
+                url('https://images.unsplash.com/photo-1494976388531-d1058bb78471?w=1200&h=500&fit=crop') center/cover;
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.hero-cta {
+    display: inline-block;
+    background: #e74c3c;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+}
+
+.hero-cta:hover {
+    background: #c0392b;
+}
+
+/* ============================================
+   SECTION STYLES
+   ============================================ */
+
+.section-light-bg {
+    background: #f8f9fa;
+}
+
+.section-cta {
+    background: linear-gradient(135deg, #1a5490 0%, #2c3e50 100%);
+    color: white;
+    text-align: center;
+}
+
+.section-cta h2 {
+    color: white;
+}
+
+.section-cta p {
+    color: #ecf0f1;
+    margin-bottom: 2rem;
+}
+
+/* ============================================
+   HEADING COLORS
+   ============================================ */
+
+.heading-primary {
+    color: #1a5490;
+    margin-bottom: 2rem;
+}
+
+.heading-secondary {
+    color: #1a5490;
+    margin-bottom: 1rem;
+}
+
+/* ============================================
+   IMAGE STYLES
+   ============================================ */
+
+.team-member-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.fleet-truck-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+/* ============================================
+   LINK STYLES
+   ============================================ */
+
+.social-link {
+    color: #1a5490;
+    text-decoration: none;
+    margin-right: 1rem;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #0d2847;
+}
+
+.social-link-last {
+    color: #1a5490;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-link-last:hover {
+    color: #0d2847;
+}
+
+/* ============================================
+   GRID LAYOUTS
+   ============================================ */
+
+.about-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.services-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.benefit-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    color: #27ae60;
+    margin-bottom: 1rem;
+}
+
+.benefit-icon-title {
+    color: #1a5490;
+    margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   VALUES LIST
+   ============================================ */
+
+.values-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.values-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   VEHICLE TYPES HEADING
+   ============================================ */
+
+.vehicle-types-heading {
+    margin-top: 3rem;
+}
+
 @media print {
     body {
         background-color: white;
